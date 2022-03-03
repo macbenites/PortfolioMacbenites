@@ -1,14 +1,19 @@
 import Link from "next/link";
-export default function NavItem({ href, children, active }) {
+
+const NavItem = ({ href, children, active, onClick }) => {
   return (
     <li
-      className={`flex items-center hover:bg-orange-400 rounded hover:text-white text-gray-800 transition-colors ${
+      className={`md:my-0 my-3 md:py-2 py-4 hover:text-orange-400 text-gray-800 transition-colors ${
         active && "text-orange-500"
       }`}
     >
       <Link href={href}>
-        <a className="px-3 py-2 font-semibold text-base">{children}</a>
+        <a className="py-2 font-medium text-lg duration-500" onClick={onClick}>
+          {children}
+        </a>
       </Link>
     </li>
   );
-}
+};
+
+export default NavItem;

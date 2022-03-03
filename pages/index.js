@@ -5,10 +5,8 @@ import Footer from "../components/Footer";
 export default function Home() {
   return (
     <Layout title="Home">
-      <div className="max-w-5xl m-auto p-6">
-        <Main />
-        <Services />
-      </div>
+      <Main />
+      <Services />
     </Layout>
   );
 }
