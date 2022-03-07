@@ -10,28 +10,36 @@ export default function Footer() {
         </div>
         <div className="flex gap-6  justify-center">
           <Image
-            src={"/image/linkedin.svg"}
+            src="/image/linkedin.svg"
             alt="Linkedin"
             width={40}
             height={40}
+            blurDataURL={"/image/close.svg"}
+            placeholder="blur"
           />
           <Image
-            src={"/image/whatsapp.svg"}
-            alt="Linkedin"
+            src="/image/whatsapp.svg"
+            alt="WhatsApp"
             width={40}
             height={40}
+            blurDataURL={"/image/close.svg"}
+            placeholder="blur"
           />
           <Image
-            src={"/image/github.svg"}
-            alt="Linkedin"
+            src="/image/github.svg"
+            alt="Github"
             width={40}
             height={40}
+            blurDataURL={"/image/close.svg"}
+            placeholder="blur"
           />
           <Image
-            src={"/image/instagram.svg"}
-            alt="Linkedin"
+            src="/image/instagram.svg"
+            alt="Instagram"
             width={40}
             height={40}
+            blurDataURL={"/image/close.svg"}
+            placeholder="blur"
           />
         </div>
       </div>

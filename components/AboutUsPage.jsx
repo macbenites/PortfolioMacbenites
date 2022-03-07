@@ -37,8 +37,8 @@ export default function AboutUsPage() {
           src={"/image/me.png"}
           alt="Mi picture"
           className="object-contain"
-          width={400}
-          height={400}
+          width="400"
+          height="400"
         />
       </div>
     </section>
@@ -48,7 +48,7 @@ export default function AboutUsPage() {
 const IconAbout = ({ src, alt, title }) => {
   return (
     <div className="text-center">
-      <Image src={src} width={50} height={50} alt={alt} />
+      <Image src={src} width="50" height="50" alt={alt} />
       <p className="text-slate-900 text-md font-extralight">{title}</p>
     </div>
   );

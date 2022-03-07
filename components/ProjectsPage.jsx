@@ -1,5 +1,6 @@
 import Image from "next/image";
-export default function ProjectsPage() {
+
+export default function ProjectsPage({ projects }) {
   return (
     <section className="flex flex-col md:flex-row	content-center bg-white min-h-screen mt-10 p-6">
       <div className="w-full">
@@ -10,28 +11,26 @@ export default function ProjectsPage() {
           </span>
         </h1>
         <div className="mt-5">
-          <CardProjects
-            src={"/image/react.svg"}
-            alt="Countries App"
-            title="Countries App"
-            description="A simple app to show you the countries in the world."
-          />
+          {projects.map((project) => (
+            <div
+              className="flex flex-col md:flex-row items-center justify-center mb-10"
+              key={project.id}
+            >
+              <div className="w-full md:w-1/2">
+                <h3>{project.title}</h3>
+                <p>{project.description}</p>
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  width={400}
+                  height={400}
+                  className="rounded-lg shadow-lg"
+                />
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
   );
 }
-
-const CardProjects = ({ src, alt, title, description }) => {
-  return (
-    <div className="hover:bg-gradient-to-r from-orange-500 via-indigo-500 to-green-500  p-4 rounded-2xl transition-colors">
-      <div className="flex gap-3 bg-white p-6 rounded-2xl hover:shadow-lg hover:shadow-gray-500/50">
-        <Image src={src} width={40} height={40} alt={alt} />
-        <div>
-          <h2 className="text-xl font-bold text-cyan-900">{title}</h2>
-          <p className="text-sm text-gray-700">{description}</p>
-        </div>
-      </div>
-    </div>
-  );
-};
