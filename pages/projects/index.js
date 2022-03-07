@@ -1,6 +1,6 @@
 import ProjectsPage from "../../components/ProjectsPage";
 import Layout from "../../components/Layout";
-import { projects } from "../../data/projects";
+import { projects } from "../../public/data/projects";
 
 export default function Projects({ projects }) {
   return (
