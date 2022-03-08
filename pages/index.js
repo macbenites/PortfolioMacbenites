@@ -18,7 +18,7 @@ const Main = () => {
       <div className="flex flex-col md:flex-row">
         <div className="w-auto md:w-8/12">
           <p className="text-sm text-gray-700">Welcome, I&apos;m</p>
-          <h1 className="text-7xl font-sans break-words font-semibold text-cyan-900 antialiased">
+          <h1 className="text-7xl font-sans break-words font-semibold text-cyan-900 antialiased aos-init aos-animate">
             Marlon Acosta.
             <br />I build web and mobile apps.
           </h1>
