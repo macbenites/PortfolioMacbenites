@@ -5,18 +5,18 @@ import NavItem from "./NavItem";
 const Header = () => {
   let [open, setOpen] = useState(false);
 
-  const HideScrollbar = (open) => {
-    document.body.className = !open ? "overflow-hidden" : "overflow-auto";
-  };
+  // const HideScrollbar = (open) => {
+  //   document.body.className = !open ? "overflow-hidden" : "overflow-auto";
+  // };
 
   const handleClick = () => {
-    HideScrollbar(open);
+    // HideScrollbar(open);
     setOpen(!open);
   };
 
   return (
     <header className="shadow-md w-full sticky top-0 left-0 bg-white z-10">
-      <nav className="md:flex items-center justify-between py-6 md:px-6 px-6 ">
+      <nav className="flex items-center justify-between py-6 md:px-6 px-6 transition-all duration-700 ease-in-out">
         <div className="font-bold text-2xl cursor-pointer flex items-center text-gray-800">
           <span className="text-3xl text-indigo-600 mr-1 pt-2">
             <ion-icon name="logo-ionic"></ion-icon>
@@ -44,25 +44,29 @@ const Header = () => {
           )}
         </div>
         <ul
-          className={`md:flex md:items-center md:max-w-sm md:justify-between bg-white md:pb-0 sm:pb-0 pb-12 absolute md:static md:z-auto z-[-1] left-0 w-full md:h-auto md:p-0 px-7 transition-all duration-700 ease-in-out ${
-            open ? "top-20 h-screen" : "top-[-490px]"
-          }`}
+          className={`hidden md:flex md:justify-between bg-white md:max-w-md md:w-full transition-all duration-700 ease-in-out`}
         >
-          <NavItem href="/" onClick={handleClick}>
-            Home
-          </NavItem>
-          <NavItem href="/about" onClick={handleClick}>
-            About
-          </NavItem>
-          <NavItem href="/projects" onClick={handleClick}>
-            Projects
-          </NavItem>
-          <NavItem href="/contact" onClick={handleClick}>
-            Contact
-          </NavItem>
+          <NavItem href="/">Home</NavItem>
+          <NavItem href="/about">About</NavItem>
+          <NavItem href="/projects">Projects</NavItem>
+          <NavItem href="/contact">Contact</NavItem>
         </ul>
+        {open ? <SideMenu /> : ""}
       </nav>
     </header>
+  );
+};
+
+const SideMenu = () => {
+  return (
+    <div className="fixed left-0 top-20 w-2/3 sm:w-2/4 z-10 md:hidden shadow-lg">
+      <ul className="flex flex-col text-lg bg-white font-bold h-screen px-6">
+        <NavItem href="/">Home</NavItem>
+        <NavItem href="/about">About</NavItem>
+        <NavItem href="/projects">Projects</NavItem>
+        <NavItem href="/contact">Contact</NavItem>
+      </ul>
+    </div>
   );
 };
 
