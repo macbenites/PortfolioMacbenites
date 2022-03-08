@@ -1,6 +1,7 @@
 import Layout from "../components/Layout";
 import CardServices from "../components/CardServices";
 import Footer from "../components/Footer";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -13,7 +14,7 @@ export default function Home() {
 
 const Main = () => {
   return (
-    <section className="py-16">
+    <section className="container">
       <div className="flex flex-col md:flex-row">
         <div className="w-auto md:w-8/12">
           <p className="text-sm text-gray-700">Welcome, I&apos;m</p>
@@ -25,9 +26,13 @@ const Main = () => {
             I&apos;m a Full Stack Web Developer with a passion for building
             applications that are user-friendly and easy to use.
           </p>
-          <button className="text-lg bg-orange-500 hover:bg-orange-400 text-white font-bold py-3 px-7 rounded-lg mt-8 transition-colors">
-            Get in Touch
-          </button>
+          <div className="my-8">
+            <Link href="/contact">
+              <a className="text-lg bg-orange-500 hover:bg-orange-400 text-white font-bold py-3 px-7 rounded-lg transition-colors">
+                Get in Touch
+              </a>
+            </Link>
+          </div>
         </div>
       </div>
     </section>
