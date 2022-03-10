@@ -3,7 +3,7 @@
 @tailwind utilities;
 @layer utilities {
   html {
-    font-family: "Inter", sans-serif;
+    font-family: 'Inter', sans-serif;
   }
   .animation-delay-2000 {
     animation-delay: 2s;

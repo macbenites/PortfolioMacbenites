@@ -1,8 +1,8 @@
-import Head from "next/head";
-import Header from "./Header";
-import Footer from "./Footer";
+import Head from 'next/head';
+import Header from '@components/Header';
+import Footer from '@components/Footer';
 
-export default function Layout({ children, title }) {
+export default function MainLayout({ children, title }) {
   return (
     <div>
       <Head>

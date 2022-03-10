@@ -1,5 +1,5 @@
 import ContactPage from "../../components/ContactPage";
-import Layout from "../../components/Layout";
+import Layout from "../../layout/MainLayout";
 export default function Contact() {
   return (
     <Layout title="ContactMe">

@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from 'next/image';
 
 export default function CardServices({ src, alt, title, description }) {
   return (
