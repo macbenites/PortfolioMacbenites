@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function ProjectsPage({ projects }) {
   return (
-    <section className="flex flex-col md:flex-row	content-center bg-white min-h-screen mt-10 p-6">
+    <section className="flex flex-col md:flex-row	content-center min-h-screen mt-10 p-6">
       <div className="w-full">
         <h1 className="text-5xl font-sans break-words font-extrabold text-cyan-900 antialiased">
           Some projects <br />

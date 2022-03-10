@@ -15,20 +15,23 @@ export default function Home() {
 const Main = () => {
   return (
     <section className="container">
-      <div className="flex flex-col md:flex-row">
+      <div className="relative flex flex-col md:flex-row">
+        <div className="absolute top-0 right-0 w-72 h-72 bg-purple-300 dark:bg-slate-100 rounded-full mix-blend-multiply filter blur-xl dark:blur-2xl opacity-70 animate-blob"></div>
+        <div className="absolute top-0 right-36 w-72 h-72 bg-yellow-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
+        <div className="absolute top-32 right-8 w-72 h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
         <div className="w-auto md:w-8/12">
-          <p className="text-sm text-gray-700">Welcome, I&apos;m</p>
-          <h1 className="text-7xl font-sans break-words font-semibold text-cyan-900 antialiased aos-init aos-animate">
+          <p className="text-md text-gray-500">Welcome, I&apos;m</p>
+          <h1 className="text-7xl font-sans break-words font-semibold text-gradient dark:text-gradient-dark antialiased aos-init aos-animate">
             Marlon Acosta.
             <br />I build web and mobile apps.
           </h1>
-          <p className="text-md font-sans text-gray-700 antialiased mt-8">
+          <p className="text-xl font-sans text-gray-500 mt-8">
             I&apos;m a Full Stack Web Developer with a passion for building
             applications that are user-friendly and easy to use.
           </p>
-          <div className="my-8">
+          <div className="my-14">
             <Link href="/contact">
-              <a className="text-lg bg-orange-500 hover:bg-orange-400 text-white font-bold py-3 px-7 rounded-lg transition-colors">
+              <a className="text-md bg-black hover:bg-neutral-900 dark:bg-white dark:text-black text-white font-normal py-4 px-8 rounded-md transition-colors">
                 Get in Touch
               </a>
             </Link>
@@ -41,7 +44,7 @@ const Main = () => {
 
 const Services = () => {
   return (
-    <section className="bg-white py-16">
+    <section className="py-16">
       <div className="flex flex-col md:flex-row mt-10">
         <div className="flex flex-col w-auto bg-sky-200 md:w-6/12 rounded-2xl p-5 h-2/3 gap-4">
           <CardServices

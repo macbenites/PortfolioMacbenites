@@ -1,11 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-/* @media (prefers-color-scheme: dark) {
-  body {
-    background-color: #282c34;
-    color: #fff;
+@layer utilities {
+  html {
+    font-family: "Inter", sans-serif;
   }
-} */
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
+  .text-gradient {
+    background: linear-gradient(to right, #7928ca, #ff0080);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 
+  .text-gradient-dark {
+    background: linear-gradient(to right, #007cf0, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}

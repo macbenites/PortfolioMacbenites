@@ -14,8 +14,8 @@ const Header = () => {
   };
 
   return (
-    <header>
-      <nav className="py-4 w-full bg-white dark:bg-gray-900 shadow-lg">
+    <header className="bg-white dark:bg-dark-default">
+      <nav className="py-4 w-full shadow-lg">
         <div className="flex flex-col px-4 mx-auto max-w-screen-xl md:px-6 md:flex-row md:justify-between md:items-center">
           <div className="flex items-center justify-between">
             <div className="font-bold text-2xl cursor-pointer flex items-center text-gray-800">
@@ -112,22 +112,8 @@ const Header = () => {
             </div>
           </div>
         </div>
-        {/* {open ? <SideMenu /> : ""} */}
       </nav>
     </header>
-  );
-};
-
-const SideMenu = () => {
-  return (
-    <div className="fixed left-0 top-20 w-2/3 sm:w-2/4 z-10 md:hidden shadow-lg">
-      <ul className="flex flex-col text-lg bg-white font-bold h-screen px-6">
-        <NavItem href="/">Home</NavItem>
-        <NavItem href="/about">About</NavItem>
-        <NavItem href="/projects">Projects</NavItem>
-        <NavItem href="/contact">Contact</NavItem>
-      </ul>
-    </div>
   );
 };
 

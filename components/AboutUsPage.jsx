@@ -3,7 +3,7 @@ import TimeLine from "./TimeLine";
 export default function AboutUsPage() {
   return (
     <div>
-      <section className="flex flex-col md:flex-row	content-center bg-white min-h-screen mt-10 p-6">
+      <section className="flex flex-col md:flex-row	content-cente min-h-screen mt-10 p-6">
         <div className="md:w-8/12">
           <h1 className="text-5xl font-sans break-words font-extrabold text-cyan-900 antialiased">
             About{" "}
@@ -11,7 +11,7 @@ export default function AboutUsPage() {
               Me
             </span>
           </h1>
-          <p className="text-lg font-sans text-gray-700 antialiased mt-8">
+          <p className="text-lg font-normaltext-gray-200 antialiased mt-8">
             Hello! I&apos;m Junior, a Software Developer based in Lima Perú.
             <br />I enjoy creating beautiful and reliable applications for
             internet and phones. My goal is to always build scalable products
