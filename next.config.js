@@ -7,4 +7,7 @@ module.exports = withPWA({
     ignoreDuringBuilds: true,
   },
   pwa: { dest: 'public', register: true, skipWaiting: true },
+  images: {
+    domains: ['res.cloudinary.com'],
+  },
 });

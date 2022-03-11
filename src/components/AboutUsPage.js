@@ -1,40 +1,48 @@
 import Image from 'next/image';
 import TimeLine from './TimeLine';
+import { skills } from '../../public/data/projects';
+
 export default function AboutUsPage() {
   return (
-    <div>
-      <section className="flex flex-col md:flex-row	content-cente min-h-screen mt-10 p-6">
-        <div className="md:w-8/12">
-          <h1 className="text-5xl font-sans break-words font-extrabold text-cyan-900 antialiased">
-            About <span className="text-5xl font-sans break-words font-extrabold text-orange-600 antialiased">Me</span>
-          </h1>
-          <p className="text-lg font-normaltext-gray-200 antialiased mt-8">
-            Hello! I&apos;m Junior, a Software Developer based in Lima Perú.
-            <br />I enjoy creating beautiful and reliable applications for internet and phones. My goal is to always build scalable products and performant experiences.
-          </p>
-          <div className="grid grid-cols-3 gap-6 mt-8">
-            <IconAbout src={'/image/react.svg'} alt="React" title="React.js" />
-            <IconAbout src={'/image/javascript.svg'} alt="javascript" title="JavaScript" />
-            <IconAbout src={'/image/nodejs.svg'} alt="node.js" title="Node.js" />
-            <IconAbout src={'/image/html.svg'} alt="Html" title="Html 5" />
-            <IconAbout src={'/image/css.svg'} alt="css" title="CSS" />
-            <IconAbout src={'/image/postgresql.svg'} alt="PostgresSql" title="Postgresql" />
+    <>
+      <section className="min-h-screen flex">
+        <div className="flex flex-col md:flex-row m-auto">
+          <div className="md:w-8/12 flex flex-col justify-between">
+            <h1 className="text-7xl font-sans break-words font-semibold text-gradient dark:text-gradient-dark antialiased aos-init aos-animate">About Me.</h1>
+            <p className="text-base font-sans text-gray-500 mt-8 md:max-w-md ">
+              Hello! I&apos;m Junior, a Full Stack Developer based in Lima Perú.
+              <br />I enjoy creating beautiful and reliable applications for internet and phones. My goal is to always build scalable products and performant experiences.
+            </p>
+            <button className="w-full sm:w-28 text-md bg-black hover:bg-neutral-900 dark:bg-white dark:text-black text-white font-normal py-3 px-6 mt-8 rounded-md transition-colors">Resume</button>
+          </div>
+          <div className="md:pl-8 mt-20 md:mt-0 mx-auto md:w-6/12">
+            <Image src={'/image/me.jpg'} alt="Mi picture" className="object-contain rounded-xl" width="600" height="600" />
           </div>
         </div>
-        <div className="mt-5 md:w-4/12">
-          <Image src={'/image/me.png'} alt="Mi picture" className="object-contain" width="400" height="400" />
-        </div>
       </section>
-      <TimeLine />
-    </div>
+      <Skills />
+    </>
   );
 }
 
 const IconAbout = ({ src, alt, title }) => {
   return (
-    <div className="text-center">
-      <Image src={src} width="50" height="50" alt={alt} />
-      <p className="text-slate-900 text-md font-extralight">{title}</p>
+    <div className="text-center p-4 rounded-lg bg-white shadow-2xl dark:bg-transparent dark:border dark:border-gray-700 dark:border-solid w-24">
+      <Image src={src} width="40" height="40" alt={alt} />
+      <p className="text-gray-500 text-sm font-light">{title}</p>
     </div>
+  );
+};
+
+const Skills = () => {
+  return (
+    <section className="min-h-screen">
+      <h1 className="text-7xl font-sans break-words font-semibold text-gradient dark:text-gradient-dark text-center">Skills.</h1>
+      <div className="flex flex-wrap gap-2 mt-10 justify-center">
+        {skills.map((skill) => (
+          <IconAbout key={skill.id} {...skill} />
+        ))}
+      </div>
+    </section>
   );
 };

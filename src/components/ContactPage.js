@@ -44,9 +44,7 @@ const ContactPage = () => {
 
   return (
     <div className="container max-w-xl m-auto">
-      <h1 className="text-5xl font-sans break-words font-extrabold text-cyan-900 antialiased">
-        Contact <span className="text-5xl font-sans break-words font-extrabold text-orange-600 antialiased">Me</span>
-      </h1>
+      <h1 className="text-7xl font-sans break-words font-semibold text-gradient dark:text-gradient-dark antialiased aos-init aos-animate">Contact Me.</h1>
       <form
         className="w-full py-20"
         // ref={form}

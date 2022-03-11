@@ -12,13 +12,13 @@
     animation-delay: 4s;
   }
   .text-gradient {
-    background: linear-gradient(to right, #7928ca, #ff0080);
+    background: linear-gradient(to right, #007cf0, #00dfd8);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 
   .text-gradient-dark {
-    background: linear-gradient(to right, #007cf0, #ffffff);
+    background: linear-gradient(to right, #ff4d4d, #f9cb28);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }

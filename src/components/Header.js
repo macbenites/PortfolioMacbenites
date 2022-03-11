@@ -15,11 +15,11 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-white dark:bg-dark-default">
-      <nav className="py-4 w-full shadow-lg">
+    <header className="bg-white dark:bg-dark-default w-full fixed z-20 ">
+      <nav className="py-4 shadow-lg">
         <div className="flex flex-col px-4 mx-auto max-w-screen-xl md:px-6 md:flex-row md:justify-between md:items-center">
           <div className="flex items-center justify-between">
-            <div className="font-bold text-2xl cursor-pointer flex items-center text-gray-800">
+            <div className="font-bold text-2xl cursor-pointer flex items-center text-black dark:text-white">
               <span className="text-3xl text-indigo-600 mr-1 pt-2">
                 <ion-icon name="logo-ionic"></ion-icon>
               </span>

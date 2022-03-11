@@ -1,21 +1,56 @@
+import { faGithub, faLinkedin, faWhatsapp, faInstagram } from '@fortawesome/free-brands-svg-icons';
+
 export const projects = [
   {
     id: 1,
-    title: "Project 1",
-    image: "/image/react.svg",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure .",
-    technologies: [
-      "React",
-      "Redux",
-      "Node",
-      "Express",
-      "MongoDB",
-      "Mongoose",
-      "Jest",
-      "Enzyme",
-    ],
-    repository: "https://github.com/macbenites/pg-frontend",
-    link: "www.google.com",
+    title: '< Sejuega App />',
+    image: 'https://res.cloudinary.com/djqkj0inf/image/upload/v1646957826/Portfolio%20/sejuega_qsviie.png',
+    description: 'Sejuega is an application where different users can join or create football matches, in addition to having a conversation through a chat made with Firebase.',
+    technologies: ['React.js', 'Redux', 'Node.js', 'Express.js', 'PosgreSql', 'Styled-Components', 'Firebase'],
+    repository: 'https://github.com/macbenites/pg-frontend',
+    link: 'https://www.sejuega.me/',
   },
+  {
+    id: 2,
+    title: '< Countries App />',
+    image: 'https://res.cloudinary.com/djqkj0inf/image/upload/v1646965677/Portfolio%20/countries_zmreik.png',
+    description:
+      'Countries App is a SPA (Single Page Application) with the theme of Countries. Consume data from an external api restcountries through a Back-End developed with Node.js and Express. Some features are: Search countries, filtered and sorted by name and location, creation of tourist activities.',
+    technologies: ['React.js', 'Redux', 'Node.js', 'Express.js', 'PosgreSql', 'Styled-Components'],
+    repository: 'https://github.com/macbenites/PI-Countries-main',
+    link: 'https://countriesapplication.vercel.app/',
+  },
+  {
+    id: 3,
+    title: '< Weather App />',
+    image: 'https://res.cloudinary.com/djqkj0inf/image/upload/v1646965679/Portfolio%20/weather_w7fzdb.png',
+    description: 'Weather App is a meteorological SPA (Single Page Application) that provides real-time weather information of the searched city. It was developed using React.js, Styled-components.',
+    technologies: ['React.js', 'Styled-Components', 'API'],
+    repository: 'https://github.com/macbenites/macWeather',
+    link: 'https://macweather.netlify.app/',
+  },
+];
+
+export const skills = [
+  { id: 1, src: '/image/react.svg', alt: 'React', title: 'React.js' },
+  { id: 2, src: '/image/javascript.svg', alt: 'javascript', title: 'JavaScript' },
+  { id: 3, src: '/image/nodejs.svg', alt: 'node.js', title: 'Node.js' },
+  { id: 4, src: '/image/html.svg', alt: 'Html', title: 'Html 5' },
+  { id: 5, src: '/image/css.svg', alt: 'css', title: 'CSS' },
+  { id: 6, src: '/image/sequelize.svg', alt: 'Sequelize', title: 'Sequelize' },
+  { id: 7, src: '/image/postgresql.svg', alt: 'PostgresSql', title: 'Postgresql' },
+  { id: 8, src: '/image/figma.svg', alt: 'Figma', title: 'Figma' },
+  { id: 9, src: '/image/redux.svg', alt: 'Redux', title: 'Redux' },
+  { id: 10, src: '/image/python.svg', alt: 'Python', title: 'Python' },
+  { id: 7, src: '/image/c.svg', alt: 'C++', title: 'C++' },
+  { id: 7, src: '/image/java.svg', alt: 'Java', title: 'Java' },
+  { id: 7, src: '/image/linux.svg', alt: 'Linux', title: 'Linux' },
+  { id: 7, src: '/image/mysql.svg', alt: 'MysqSql', title: 'MySql' },
+];
+
+export const socialMedia = [
+  { icon: faGithub, link: 'https://github.com/macbenites' },
+  { icon: faLinkedin, link: 'https://www.linkedin.com/in/marlonacostafullstack/' },
+  { icon: faInstagram, link: 'https://www.instagram.com/marlonacostab/' },
+  { icon: faWhatsapp, link: 'https://wa.link/i8tvm9' },
 ];

@@ -1,10 +1,11 @@
 import CardServices from '@components/CardServices';
 import Link from 'next/link';
 import MainLayout from '@layout/MainLayout';
+import Blob from '@components/Blob';
 
 export default function Home() {
   return (
-    <MainLayout>
+    <MainLayout title="Home">
       <Main />
       <Services />
     </MainLayout>
@@ -13,19 +14,17 @@ export default function Home() {
 
 const Main = () => {
   return (
-    <section className="container">
-      <div className="relative flex flex-col md:flex-row">
-        <div className="absolute top-0 right-0 w-72 h-72 bg-purple-300 dark:bg-slate-100 rounded-full mix-blend-multiply filter blur-xl dark:blur-2xl opacity-70 animate-blob"></div>
-        <div className="absolute top-0 right-36 w-72 h-72 bg-yellow-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
-        <div className="absolute top-32 right-8 w-72 h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
+    <section className="min-h-screen flex">
+      <div className="relative flex flex-col md:flex-row m-auto">
+        <Blob />
         <div className="w-auto md:w-8/12">
           <p className="text-md text-gray-500">Welcome, I&apos;m</p>
           <h1 className="text-7xl font-sans break-words font-semibold text-gradient dark:text-gradient-dark antialiased aos-init aos-animate">
             Marlon Acosta.
             <br />I build web and mobile apps.
           </h1>
-          <p className="text-xl font-sans text-gray-500 mt-8">I&apos;m a Full Stack Web Developer with a passion for building applications that are user-friendly and easy to use.</p>
-          <div className="my-14">
+          <p className="text-base font-sans text-gray-500 mt-8">I&apos;m a Full Stack Web Developer with a passion for building applications that are user-friendly and easy to use.</p>
+          <div className="my-14 ">
             <Link href="/contact">
               <a className="text-md bg-black hover:bg-neutral-900 dark:bg-white dark:text-black text-white font-normal py-4 px-8 rounded-md transition-colors">Get in Touch</a>
             </Link>
