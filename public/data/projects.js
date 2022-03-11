@@ -4,7 +4,7 @@ export const projects = [
   {
     id: 1,
     title: '< Sejuega App />',
-    image: 'https://res.cloudinary.com/djqkj0inf/image/upload/v1646957826/Portfolio%20/sejuega_qsviie.png',
+    image: 'https://res.cloudinary.com/djqkj0inf/image/upload/v1646965670/Portfolio%20/sejuega_ejywch.png',
     description: 'Sejuega is an application where different users can join or create football matches, in addition to having a conversation through a chat made with Firebase.',
     technologies: ['React.js', 'Redux', 'Node.js', 'Express.js', 'PosgreSql', 'Styled-Components', 'Firebase'],
     repository: 'https://github.com/macbenites/pg-frontend',
