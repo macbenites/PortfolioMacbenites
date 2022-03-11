@@ -14,7 +14,7 @@ export default function Home() {
 
 const Main = () => {
   return (
-    <section className="min-h-screen flex">
+    <section className="py-16 md:py-24">
       <div className="relative flex flex-col md:flex-row m-auto">
         <Blob />
         <div className="w-auto md:w-8/12">

@@ -5,7 +5,7 @@ import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 
 export const Project = ({ id, title, description, image, technologies, repository, link }) => {
   return (
-    <div className="flex flex-col md:flex-row mb-10 gap-6 my-20" key={id}>
+    <div className="flex flex-col md:flex-row mb-10 gap-6 my-14" key={id}>
       <div className="w-full md:w-2/3">
         <h3 className="text-2xl font-semibold text-black dark:text-white">{title}</h3>
         <p className="text-base font-sans text-gray-500 mt-8">{description}</p>

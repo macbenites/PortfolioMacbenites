@@ -2,33 +2,12 @@ import emailjs from '@emailjs/browser';
 import { useForm } from 'react-hook-form';
 
 const ContactPage = () => {
-  //const form = useRef();
-
   const {
     register,
     handleSubmit,
     trigger,
     formState: { errors },
   } = useForm();
-
-  // const sendEmail = (e) => {
-  //   e.preventDefault();
-  //   emailjs
-  //     .sendForm(
-  //       "service_7o2etjo",
-  //       "template_klc72jc",
-  //       form.current,
-  //       "bJJRcSrJq9DJnlSo2"
-  //     )
-  //     .then(
-  //       (result) => {
-  //         alert(result.text);
-  //       },
-  //       (error) => {
-  //         alert(error.text);
-  //       }
-  //     );
-  // };
 
   const onSubmit = (data) => {
     alert('Form submitted');
@@ -43,13 +22,9 @@ const ContactPage = () => {
   };
 
   return (
-    <div className="container max-w-xl m-auto">
+    <section className="container max-w-xl py-16 md:py-24 mx-auto">
       <h1 className="text-7xl font-sans break-words font-semibold text-gradient dark:text-gradient-dark antialiased aos-init aos-animate">Contact Me.</h1>
-      <form
-        className="w-full py-20"
-        // ref={form}
-        onSubmit={handleSubmit(onSubmit)}
-      >
+      <form className="w-full py-10" onSubmit={handleSubmit(onSubmit)}>
         <div className="flex flex-wrap -mx-3 mb-6">
           <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
             <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">First Name</label>
@@ -151,7 +126,7 @@ const ContactPage = () => {
           <div className="md:w-2/3"></div>
         </div>
       </form>
-    </div>
+    </section>
   );
 };
 
