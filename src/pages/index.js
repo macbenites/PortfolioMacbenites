@@ -14,7 +14,7 @@ export default function Home() {
 
 const Main = () => {
   return (
-    <section className="py-16 md:py-24">
+    <section className="py-16 md:py-24" data-aos="fade-zoom-in" data-aos-easing="ease-in-back">
       <div className="relative flex flex-col md:flex-row m-auto">
         <Blob />
         <div className="w-auto md:w-8/12">
@@ -44,12 +44,12 @@ const Services = () => {
           <CardServices src={'/image/figma.svg'} title="Figma" description="Figma developer " alt={'Figma Icon'} />
           <CardServices src={'/image/github.svg'} title="Github" description="Github developer" alt={'Github Icon'} />
         </div>
-        <div className="w-auto md:w-6/12 sm:px-10 py-10 ">
+        <div className="w-auto md:w-6/12 sm:px-10 py-10">
           <h1 className="text-5xl font-sans break-words font-extrabold text-cyan-900 antialiased">
             My awesome <br />
             <span className="text-5xl font-sans break-words font-extrabold text-orange-600 antialiased">Services</span>
           </h1>
-          <p className="text-lg font-sans text-gray-700 antialiased mt-8">
+          <p className="text-lg font-sans text-gray-700 antialiased mt-8 z-40">
             I am a Full Stack Web Developer with a passion for building applications that are user-friendly and easy to use. I am a Full Stack Web Developer with a passion for building applications
             that are user-friendly and easy to use.
           </p>

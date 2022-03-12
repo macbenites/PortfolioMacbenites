@@ -3,13 +3,24 @@ module.exports = {
   content: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
   darkMode: 'class',
   theme: {
-    fontFamily: {
-      body: ['Oswald', 'sans-serif'],
+    backdropFilter: {
+      blur: 'blur(180px)',
     },
+
+    screens: {
+      xs: '480px',
+      sm: '640px',
+      md: '768px',
+      lg: '1024px',
+      xl: '1280px',
+      '2xl': '1536px',
+    },
+
     extend: {
       animation: {
         blob: 'blob 7s infinite',
       },
+
       keyframes: {
         blob: {
           '0%': { transform: 'translate(0px, 0px) scale(1)' },
@@ -27,6 +38,11 @@ module.exports = {
           700: '#202125',
         },
       },
+      inset: {
+        17: '68px',
+        26: '104px',
+      },
     },
   },
+  plugins: [require('tailwindcss-filters')],
 };

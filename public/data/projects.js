@@ -2,7 +2,6 @@ import { faGithub, faLinkedin, faWhatsapp, faInstagram } from '@fortawesome/free
 
 export const projects = [
   {
-    id: 1,
     title: '< Sejuega App />',
     image: 'https://res.cloudinary.com/djqkj0inf/image/upload/v1646965670/Portfolio%20/sejuega_ejywch.png',
     description: 'Sejuega is an application where different users can join or create football matches, in addition to having a conversation through a chat made with Firebase.',
@@ -11,7 +10,6 @@ export const projects = [
     link: 'https://www.sejuega.me/',
   },
   {
-    id: 2,
     title: '< Countries App />',
     image: 'https://res.cloudinary.com/djqkj0inf/image/upload/v1646965677/Portfolio%20/countries_zmreik.png',
     description:
@@ -21,7 +19,6 @@ export const projects = [
     link: 'https://countriesapplication.vercel.app/',
   },
   {
-    id: 3,
     title: '< Weather App />',
     image: 'https://res.cloudinary.com/djqkj0inf/image/upload/v1646965679/Portfolio%20/weather_w7fzdb.png',
     description: 'Weather App is a meteorological SPA (Single Page Application) that provides real-time weather information of the searched city. It was developed using React.js, Styled-components.',
@@ -32,20 +29,20 @@ export const projects = [
 ];
 
 export const skills = [
-  { id: 1, src: '/image/react.svg', alt: 'React', title: 'React.js' },
-  { id: 2, src: '/image/javascript.svg', alt: 'javascript', title: 'JavaScript' },
-  { id: 3, src: '/image/nodejs.svg', alt: 'node.js', title: 'Node.js' },
-  { id: 4, src: '/image/html.svg', alt: 'Html', title: 'Html 5' },
-  { id: 5, src: '/image/css.svg', alt: 'css', title: 'CSS' },
-  { id: 6, src: '/image/sequelize.svg', alt: 'Sequelize', title: 'Sequelize' },
-  { id: 7, src: '/image/postgresql.svg', alt: 'PostgresSql', title: 'Postgresql' },
-  { id: 8, src: '/image/figma.svg', alt: 'Figma', title: 'Figma' },
-  { id: 9, src: '/image/redux.svg', alt: 'Redux', title: 'Redux' },
-  { id: 10, src: '/image/python.svg', alt: 'Python', title: 'Python' },
-  { id: 7, src: '/image/c.svg', alt: 'C++', title: 'C++' },
-  { id: 7, src: '/image/java.svg', alt: 'Java', title: 'Java' },
-  { id: 7, src: '/image/linux.svg', alt: 'Linux', title: 'Linux' },
-  { id: 7, src: '/image/mysql.svg', alt: 'MysqSql', title: 'MySql' },
+  { src: '/image/react.svg', alt: 'React', title: 'React.js' },
+  { src: '/image/javascript.svg', alt: 'javascript', title: 'JavaScript' },
+  { src: '/image/nodejs.svg', alt: 'node.js', title: 'Node.js' },
+  { src: '/image/html.svg', alt: 'Html', title: 'Html 5' },
+  { src: '/image/css.svg', alt: 'css', title: 'CSS' },
+  { src: '/image/sequelize.svg', alt: 'Sequelize', title: 'Sequelize' },
+  { src: '/image/postgresql.svg', alt: 'PostgresSql', title: 'Postgresql' },
+  { src: '/image/figma.svg', alt: 'Figma', title: 'Figma' },
+  { src: '/image/redux.svg', alt: 'Redux', title: 'Redux' },
+  { src: '/image/python.svg', alt: 'Python', title: 'Python' },
+  { src: '/image/c.svg', alt: 'C++', title: 'C++' },
+  { src: '/image/java.svg', alt: 'Java', title: 'Java' },
+  { src: '/image/linux.svg', alt: 'Linux', title: 'Linux' },
+  { src: '/image/mysql.svg', alt: 'MysqSql', title: 'MySql' },
 ];
 
 export const socialMedia = [
