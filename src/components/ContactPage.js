@@ -22,15 +22,15 @@ const ContactPage = () => {
   };
 
   return (
-    <section className="container max-w-xl py-16 md:py-24 mx-auto">
-      <h1 className="text-7xl font-sans break-words font-semibold text-gradient dark:text-gradient-dark antialiased aos-init aos-animate">Contact Me.</h1>
-      <form className="w-full py-10" onSubmit={handleSubmit(onSubmit)}>
+    <section className="container max-w-3xl py-16 mx-auto">
+      <h1 className="text-6xl font-sans break-words font-semibold text-gradient dark:text-gradient-dark antialiased aos-init aos-animate">Contact Me.</h1>
+      <form className="w-full py-5" onSubmit={handleSubmit(onSubmit)}>
         <div className="flex flex-wrap -mx-3 mb-6">
           <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-            <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">First Name</label>
+            <label className="block tracking-wide text-gray-500 dark:text-gray-300 text-md font-bold mb-2">First Name</label>
             <input
-              className={`appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white ${
-                errors.user_name && ' border-red-500'
+              className={`appearance-none block w-full bg-transparent dark:text-white text-gray-700 border rounded py-3 px-4 mb-3 focus:outline-none focus:bg-transparent ${
+                !errors.user_name ? 'border-gray-500' : ' border-red-400'
               }`}
               type="text"
               name="user_name"
@@ -38,88 +38,92 @@ const ContactPage = () => {
               {...register('user_name', {
                 required: {
                   value: true,
-                  message: 'Nombre requerido.',
+                  message: 'Name required.',
                 },
                 pattern: {
                   value: /^[a-zA-ZÀ-ÿ\u00f1\u00d1\s]+$/,
-                  message: 'El nombre solo admite letras y espacios en blanco.',
+                  message: 'Only letters and blanks are allowed in the name.',
                 },
                 minLength: {
                   value: 3,
-                  message: 'El nombre debe contener mínimo 3 caracteres.',
+                  message: 'The name must contain at least 3 characters.',
                 },
               })}
               onKeyUp={() => {
                 trigger('user_name');
               }}
             />
-            {errors.user_name && <p className="text-red-500 text-xs italic">{errors.user_name.message}</p>}
+            {errors.user_name && <p className="text-red-400 text-xs italic">{errors.user_name.message}</p>}
           </div>
           <div className="w-full md:w-1/2 px-3">
-            <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">Last Name</label>
+            <label className="block tracking-wide text-gray-500 dark:text-gray-300 text-md font-bold mb-2">Email</label>
             <input
-              className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-              type="text"
-              placeholder="Acosta"
-            />
-          </div>
-        </div>
-        <div className="flex flex-wrap -mx-3 mb-6">
-          <div className="w-full px-3">
-            <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">E-mail</label>
-            <input
-              className={`appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white ${
-                errors.user_email && ' border-red-500'
+              className={`appearance-none block w-full bg-transparent dark:text-white text-gray-700 border rounded py-3 px-4 mb-3 focus:outline-none focus:bg-transparent ${
+                !errors.user_email ? 'border-gray-500' : ' border-red-400'
               }`}
               type="email"
               name="user_email"
               {...register('user_email', {
                 required: {
                   value: true,
-                  message: 'Email requerido.',
+                  message: 'Email required.',
                 },
                 pattern: {
                   value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
-                  message: 'El formato del email ingresado no es correcto.',
+                  message: 'The format of the entered email is not correct.',
                 },
               })}
               onKeyUp={() => {
                 trigger('user_email');
               }}
             />
-            {errors.user_email && <p className="text-red-500 text-xs italic">{errors.user_email.message}</p>}
+            {errors.user_email && <p className="text-red-400 text-xs italic">{errors.user_email.message}</p>}
           </div>
+          {/* <div className="w-full md:w-1/2 px-3">
+            <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">Last Name</label>
+            <input
+              className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+              type="text"
+              placeholder="Acosta"
+            />
+          </div> */}
         </div>
+
         <div className="flex flex-wrap -mx-3 mb-6">
           <div className="w-full px-3">
-            <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">Message</label>
+            <label className="block tracking-wide  text-gray-500 dark:text-gray-300 text-md font-bold mb-2">Message</label>
             <textarea
-              className={`no-resize appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48 resize-none"
-              name="message ${errors.message && ' border-red-500'}`}
+              className={`no-resize appearance-none block w-full bg-transparent dark:text-white text-gray-700 border rounded py-3 px-4 mb-3 focus:outline-none focus:bg-transparent  h-36 resize-none"
+              ${!errors.message ? 'border-gray-500' : ' border-red-400'}`}
               placeholder="Your message"
               {...register('message', {
                 required: {
-                  value: false,
+                  value: true,
+                  message: 'Message required.',
                 },
                 minLength: {
                   value: 10,
-                  message: 'La nota debe contener al menos 10 caracteres.',
+                  message: 'The note must contain at least 10 characters.',
                 },
                 maxLength: {
                   value: 200,
-                  message: 'La nota no debe contener más de 200 caracteres.',
+                  message: 'The note should not contain more than 200 characters.',
                 },
               })}
               onKeyUp={() => {
                 trigger('message');
               }}
             ></textarea>
-            {errors.message && <p className="text-red-500 text-xs italic">{errors.message.message}</p>}
+            {errors.message && <p className="text-red-400 text-xs italic">{errors.message.message}</p>}
           </div>
         </div>
         <div className="md:flex md:items-center">
           <div className="md:w-1/3">
-            <button className="shadow w-full bg-teal-400 hover:bg-teal-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" type="submit" value="Send">
+            <button
+              className="shadow w-full bg-black dark:bg-white hover:bg-teal-400 focus:shadow-outline focus:outline-none text-white dark:text-black font-normal py-3 rounded-md"
+              type="submit"
+              value="Send"
+            >
               Send
             </button>
           </div>

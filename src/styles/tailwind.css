@@ -27,9 +27,6 @@
 }
 
 @layer utilities {
-  html {
-    font-family: 'Inter', sans-serif;
-  }
   .animation-delay-2000 {
     animation-delay: 2s;
   }
@@ -43,7 +40,7 @@
   }
 
   .text-gradient-dark {
-    background: linear-gradient(to right, #ff4d4d, #f9cb28);
+    background: linear-gradient(to right, #0069cc, #00dfd8);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }

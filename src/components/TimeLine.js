@@ -2,19 +2,12 @@ import Image from 'next/image';
 
 const TimeLine = () => {
   return (
-    <section class="container">
-      <h1 className="text-7xl font-sans break-words font-semibold text-gradient dark:text-gradient-dark antialiased" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
-        Education.
-      </h1>
-      <div className="relative container mx-auto  flex flex-col space-y-8  my-20">
-        <div
-          class="absolute h-full z-0 w-px bg-slate-400 shadow-lg inset-0 left-12 md:mx-auto md:right-0 md:left-0 rounded-md"
-          data-aos="fade-up"
-          data-aos-easing="linear"
-          data-aos-duration="1500"
-        ></div>
-        <div class="relative z-20 " data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
-          <img src="https://res.cloudinary.com/djqkj0inf/image/upload/v1647064787/Portfolio%20/henry_dkova2.png" alt="" class="timeline-img"  />
+    <section className="py-16 md:py-32">
+      <h1 className="text-7xl font-sans break-words font-semibold text-gradient dark:text-gradient-dark antialiased">Education.</h1>
+      <div className="relative container mx-auto  flex flex-col space-y-8  my-20" data-aos="zoom-in-down">
+        <div class="absolute h-full z-0 w-px bg-slate-400 shadow-lg inset-0 left-12 md:mx-auto md:right-0 md:left-0 rounded-md"></div>
+        <div class="relative z-20" data-aos="zoom-in-down">
+          <img src="https://res.cloudinary.com/djqkj0inf/image/upload/v1647064787/Portfolio%20/henry_dkova2.png" alt="" class="timeline-img" />
           <div class="timeline-container ">
             <div class="timeline-pointer bg-slate-100 dark:bg-dark-700" aria-hidden="true"></div>
             <div class=" p-6 rounded-md shadow-2xl bg-slate-100 dark:bg-dark-700">
@@ -25,8 +18,8 @@ const TimeLine = () => {
             </div>
           </div>
         </div>
-        <div class="relative z-10" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
-          <img src="https://res.cloudinary.com/djqkj0inf/image/upload/v1647064726/Portfolio%20/upn_giq4a9.png" alt="" class="timeline-img"  />
+        <div class="relative z-10" data-aos="zoom-in-down">
+          <img src="https://res.cloudinary.com/djqkj0inf/image/upload/v1647064726/Portfolio%20/upn_giq4a9.png" alt="" class="timeline-img" />
           <div class="timeline-container timeline-container-left">
             <div class="timeline-pointer timeline-pointer-left bg-slate-100 dark:bg-dark-700" aria-hidden="true"></div>
             <div class=" p-6 rounded-md shadow-2xl bg-slate-100 dark:bg-dark-700">

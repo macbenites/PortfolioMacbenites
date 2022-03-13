@@ -1,11 +1,11 @@
 import Image from 'next/image';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; // Import the FontAwesomeIcon component
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 
 export const Project = ({ title, description, image, technologies, repository, link }) => {
   return (
-    <div className="flex flex-col md:flex-row mb-10 gap-6 my-24" data-aos="zoom-out" data-aos-offset="300" data-aos-easing="ease-in-sine">
+    <div className="flex flex-col md:flex-row mb-10 gap-6 my-24" data-aos="fade-up" data-aos-duration="3000">
       <div className="w-full md:w-2/3">
         <h3 className="text-2xl font-semibold text-black dark:text-white">{title}</h3>
         <p className="text-base font-sans text-gray-500 mt-8">{description}</p>

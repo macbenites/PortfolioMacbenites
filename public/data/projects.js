@@ -2,7 +2,7 @@ import { faGithub, faLinkedin, faWhatsapp, faInstagram } from '@fortawesome/free
 
 export const projects = [
   {
-    title: '< Sejuega App />',
+    title: 'Sejuega App',
     image: 'https://res.cloudinary.com/djqkj0inf/image/upload/v1646965670/Portfolio%20/sejuega_ejywch.png',
     description: 'Sejuega is an application where different users can join or create football matches, in addition to having a conversation through a chat made with Firebase.',
     technologies: ['React.js', 'Redux', 'Node.js', 'Express.js', 'PosgreSql', 'Styled-Components', 'Firebase'],
@@ -10,7 +10,7 @@ export const projects = [
     link: 'https://www.sejuega.me/',
   },
   {
-    title: '< Countries App />',
+    title: 'Countries App',
     image: 'https://res.cloudinary.com/djqkj0inf/image/upload/v1646965677/Portfolio%20/countries_zmreik.png',
     description:
       'Countries App is a SPA (Single Page Application) with the theme of Countries. Consume data from an external api restcountries through a Back-End developed with Node.js and Express. Some features are: Search countries, filtered and sorted by name and location, creation of tourist activities.',
@@ -19,7 +19,7 @@ export const projects = [
     link: 'https://countriesapplication.vercel.app/',
   },
   {
-    title: '< Weather App />',
+    title: 'Weather App',
     image: 'https://res.cloudinary.com/djqkj0inf/image/upload/v1646965679/Portfolio%20/weather_w7fzdb.png',
     description: 'Weather App is a meteorological SPA (Single Page Application) that provides real-time weather information of the searched city. It was developed using React.js, Styled-components.',
     technologies: ['React.js', 'Styled-Components', 'API'],

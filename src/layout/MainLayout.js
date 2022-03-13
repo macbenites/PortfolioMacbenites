@@ -4,14 +4,14 @@ import Footer from '@components/Footer';
 
 export default function MainLayout({ children, title }) {
   return (
-    <div>
+    <>
       <Head>
         <title>{title}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <main className="max-w-4xl m-auto px-6">{children}</main>
+      <main className="max-w-4xl mx-auto px-6">{children}</main>
       <Footer />
-    </div>
+    </>
   );
 }

@@ -1,9 +1,14 @@
 import { useState } from 'react';
 import NavItem from '@components/NavItem';
 import { useTheme } from 'next-themes';
+import Image from 'next/image';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMoon, faSun, faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
+import Link from 'next/link';
 
 const Header = () => {
   const { theme, setTheme } = useTheme();
+  console.log(theme);
   const changeTheme = () => {
     setTheme(theme === 'light' ? 'dark' : 'light');
     console.log(theme);
@@ -19,37 +24,24 @@ const Header = () => {
       <nav className="py-4">
         <div className="flex flex-col px-4 mx-auto max-w-screen-xl md:px-6 md:flex-row md:justify-between md:items-center">
           <div className="flex items-center justify-between">
-            <div className="font-bold text-2xl cursor-pointer flex items-center text-black dark:text-white">
-              <span className="text-3xl text-indigo-600 mr-1 pt-2">
-                <ion-icon name="logo-ionic"></ion-icon>
-              </span>
-              MacBenites
+            <div className=" font-mono font-bold text-2xl cursor-pointer flex items-center fill-slate-600 text-black dark:text-white">
+              <Link href="/">
+                <a>&lt;Macbenites &frasl;&gt;</a>
+              </Link>
             </div>
-            <div className="flex items-center md:hidden">
+            <div className="flex gap-3 items-center md:hidden">
               <button
                 type="button"
                 onClick={changeTheme}
-                className="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
+                className="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-dark-200 focus:outline-none dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
               >
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
-                </svg>
+                {theme === 'light' ? <FontAwesomeIcon icon={faMoon} size="xl" title="Dark" /> : <FontAwesomeIcon icon={faSun} size="xl" title="Light" />}
               </button>
-              <svg viewBox="0 0 24 24" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6">
-                <path d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" className="fill-sky-400/20 stroke-sky-500"></path>
-                <path d="M12 4v1M17.66 6.344l-.828.828M20.005 12.004h-1M17.66 17.664l-.828-.828M12 20.01V19M6.34 17.664l.835-.836M3.995 12.004h1.01M6 6l.835.836" className="stroke-sky-500"></path>
-              </svg>
               <button
-                className="ml-1 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
+                className="w-10 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-dark-200 focus:outline-none dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center justify-center"
                 onClick={handleClick}
               >
-                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    fillRule="evenodd"
-                    d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                    clipRule="evenodd"
-                  ></path>
-                </svg>
+                {!open ? <FontAwesomeIcon icon={faBars} size="xl" title="Menu" /> : <FontAwesomeIcon icon={faXmark} size="xl" title="Close" />}
               </button>
             </div>
           </div>
@@ -75,11 +67,9 @@ const Header = () => {
                 <button
                   type="button"
                   onClick={changeTheme}
-                  className="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
+                  className="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-dark-200 focus:outline-none dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
                 >
-                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
-                  </svg>
+                  {theme === 'light' ? <FontAwesomeIcon icon={faMoon} size="xl" title="Dark" /> : <FontAwesomeIcon icon={faSun} size="xl" title="Light" />}
                 </button>
               </div>
             </div>
