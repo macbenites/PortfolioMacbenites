@@ -3,7 +3,7 @@ import Image from 'next/image';
 const TimeLine = () => {
   return (
     <section className="py-16 md:py-32">
-      <h1 className="text-7xl font-sans break-words font-semibold text-gradient dark:text-gradient-dark antialiased">Education.</h1>
+      <h1 className="text-6xl font-sans break-words font-semibold text-gradient dark:text-gradient-dark antialiased">Education.</h1>
       <div className="relative container mx-auto  flex flex-col space-y-8  my-20" data-aos="zoom-in-down">
         <div class="absolute h-full z-0 w-px bg-slate-400 shadow-lg inset-0 left-12 md:mx-auto md:right-0 md:left-0 rounded-md"></div>
         <div class="relative z-20" data-aos="zoom-in-down">

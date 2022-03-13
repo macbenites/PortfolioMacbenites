@@ -79,14 +79,6 @@ const ContactPage = () => {
             />
             {errors.user_email && <p className="text-red-400 text-xs italic">{errors.user_email.message}</p>}
           </div>
-          {/* <div className="w-full md:w-1/2 px-3">
-            <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">Last Name</label>
-            <input
-              className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-              type="text"
-              placeholder="Acosta"
-            />
-          </div> */}
         </div>
 
         <div className="flex flex-wrap -mx-3 mb-6">
