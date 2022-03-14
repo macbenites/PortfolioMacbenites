@@ -10,6 +10,7 @@ const ContactPage = () => {
     register,
     handleSubmit,
     trigger,
+    reset,
     formState: { errors },
   } = useForm();
 
@@ -20,6 +21,7 @@ const ContactPage = () => {
     emailjs.send('service_7o2etjo', 'template_klc72jc', data, 'bJJRcSrJq9DJnlSo2').then(
       (result) => {
         setModalOk(true);
+        reset();
       },
       (error) => {
         setModalError(true);
