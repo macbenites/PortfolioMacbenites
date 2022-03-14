@@ -8,18 +8,18 @@ export default function AboutUsPage() {
       <section className="py-16 md:py-32">
         <div className="flex flex-col-reverse md:flex-row" data-aos="fade-zoom-in" data-aos-easing="ease-in-back">
           <div className="md:w-8/12 flex flex-col justify-between gap-7">
-            <h1 className="text-6xl font-sans break-words font-semibold text-gradient dark:text-gradient-dark antialiased aos-init aos-animate">About Me.</h1>
+            <h1 className="text-6xl font-sans break-words font-semibold text-gradient dark:text-gradient-dark antialiased aos-init aos-animate">Sobre mí.</h1>
             <p className="text-base font-sans text-gray-500 mt-8 md:max-w-md ">
-              Hello! I&apos;m Marlon, a Full Stack Developer based in Lima Perú.
-              <br />I enjoy creating beautiful and reliable applications for internet and phones. My goal is to always build scalable products and performant experiences.
+              Soy un desarrollador Full Stack Web Developer nacido en Perú. Apasionado por crear aplicaciones web y móviles que sean amigables y fáciles de usar. Creativo, curioso y disfruto mucho
+              aprendiendo cosas nuevas cada día, lo que hace que el mundo de la tecnología sea lo que más me guste.
             </p>
             <a
               href="/files/MarlonAcosta_CV.pdf"
-              className="w-full md:w-48 text-md bg-black hover:bg-neutral-900 dark:bg-white dark:text-black text-white font-normal py-4 px-8 rounded-md transition-colors text-center"
+              className="w-full sm:w-48 text-md bg-black dark:hover:bg-gray-300 hover:bg-neutral-900 dark:bg-white dark:text-black text-white font-normal py-4 px-8 rounded-md transition-colors text-center"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Hire Cv
+              Ver resumen
             </a>
           </div>
           <div className="md:pl-8 md:mt-0 mx-auto md:w-6/12">
@@ -45,7 +45,7 @@ const IconAbout = ({ src, alt, title }) => {
 const Skills = () => {
   return (
     <section className="py-16 md:py-32">
-      <h1 className="text-6xl font-sans break-words font-semibold text-gradient dark:text-gradient-dark text-center">Technical Skills.</h1>
+      <h1 className="text-6xl font-sans break-words font-semibold text-gradient dark:text-gradient-dark text-center">Habilidades Técnicas.</h1>
       <div className="flex flex-wrap gap-2 mt-10 justify-center" data-aos="fade-up">
         {skills.map((skill) => (
           <IconAbout key={skill.id} {...skill} />
