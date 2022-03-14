@@ -46,14 +46,14 @@ const Header = () => {
 
         <ul className="hidden md:flex md:flex-row md:self-center pt-6 pb-3 md:py-0">
           <NavItem href="/">Inicio</NavItem>
-          <NavItem href="/about">Sobre Mi</NavItem>
+          <NavItem href="/about">Sobre Mí</NavItem>
           <NavItem href="/projects">Proyectos</NavItem>
           <NavItem href="/contact">Contacto</NavItem>
         </ul>
         {open && (
           <ul className="md:hidden w-full flex flex-col fixed top-17 left-0 z-10 bg-white dark:bg-black py-7">
             <NavItem href="/">Inicio</NavItem>
-            <NavItem href="/about">Sobre Mi</NavItem>
+            <NavItem href="/about">Sobre Mí</NavItem>
             <NavItem href="/projects">Proyectos</NavItem>
             <NavItem href="/contact">Contacto</NavItem>
           </ul>
