@@ -13,7 +13,7 @@ const ContactPage = () => {
     reset,
     formState: { errors },
   } = useForm();
-
+  
   const [modalOk, setModalOk] = useState(false);
   const [modalError, setModalError] = useState(false);
 
