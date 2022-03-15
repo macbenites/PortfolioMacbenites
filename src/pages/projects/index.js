@@ -1,12 +1,14 @@
-import ProjectsPage from "../../components/ProjectsPage";
-import Layout from "../../layout/MainLayout";
-import { projects } from "../../../public/data/projects";
+import dynamic from 'next/dynamic';
+import MainLayout from '@layout/MainLayout';
+import { projects } from '../../../public/data/projects';
+
+const DynamicComponentWithCustomLoading = dynamic(() => import('@components/ProjectsPage'), { loading: () => <p>...</p> });
 
 export default function Projects({ projects }) {
   return (
-    <Layout title="Projects">
-      <ProjectsPage projects={projects} />
-    </Layout>
+    <MainLayout title="Projects">
+      <DynamicComponentWithCustomLoading projects={projects} />
+    </MainLayout>
   );
 }
 
