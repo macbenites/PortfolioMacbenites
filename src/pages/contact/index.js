@@ -1,9 +1,9 @@
-import ContactPage from "../../components/ContactPage";
-import Layout from "../../layout/MainLayout";
+import ContactPage from '@components/ContactPage';
+import MainLayout from '@layout/MainLayout';
 export default function Contact() {
   return (
-    <Layout title="ContactMe">
+    <MainLayout title="ContactMe">
       <ContactPage />
-    </Layout>
+    </MainLayout>
   );
 }

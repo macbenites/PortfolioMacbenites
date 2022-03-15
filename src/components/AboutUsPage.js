@@ -1,10 +1,10 @@
 import Image from 'next/image';
-import TimeLine from './TimeLine';
+import TimeLine from '@components/TimeLine';
 import { skills } from '../../public/data/projects';
 
 export default function AboutUsPage() {
   return (
-    <div className="">
+    <div>
       <section className="py-16 md:py-32">
         <div className="flex flex-col-reverse md:flex-row" data-aos="fade-zoom-in" data-aos-easing="ease-in-back">
           <div className="md:w-8/12 flex flex-col justify-between gap-7">
